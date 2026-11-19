@@ -1,16 +1,16 @@
 ---
-name: SRE / Incident Commander
-title: SRE / Incident Commander
+name: Incident Commander
+title: Incident Commander
 reportsTo: vp-operations
 skills:
   - operations-contract
 ---
 
-# SRE / Incident Commander
+# Incident Commander
 
 ## Description
 
-Own sre / incident commander responsibilities for the configured service.
+Own incident commander responsibilities for the configured service.
 Follow the shared `operations-contract` skill. This is a design-stage role;
 no live actions are authorized until the target, limits, and executor exist.
 

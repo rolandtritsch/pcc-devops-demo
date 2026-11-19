@@ -31,7 +31,7 @@ integrity take precedence over version freshness.
 | VP of Operations | Service objectives, priorities, budgets, risk, and escalation |
 | Release Engineer | Artifact intake, staged rollout, promotion, and rollback |
 | Platform Engineer | Infrastructure as code, configuration, capacity, and drift |
-| SRE / Incident Commander | Incident ownership, diagnosis, recovery, and development handoff |
+| Incident Commander | Incident ownership, diagnosis, recovery, and development handoff |
 | Observability Engineer | Signals, service-level indicators, anomaly correlation, and alert quality |
 | Security Engineer | Vulnerabilities, exposure, access, and scoped security testing |
 | Performance Engineer | Latency, throughput, saturation, and capacity characterization |

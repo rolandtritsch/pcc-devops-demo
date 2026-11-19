@@ -46,7 +46,7 @@ flowchart LR
 1. Deterministic monitors alert on user impact, error-budget burn, and security
    indicators. Observability attaches recent changes and scoped telemetry.
    Correlate duplicate symptoms into one incident.
-2. SRE declares severity, takes incident command, persists a timeline, freezes
+2. Incident Commander declares severity, takes incident command, persists a timeline, freezes
    releases, and assigns operational work. SEV1 means widespread critical
    journey failure, significant data-integrity risk, or active compromise;
    SEV2 means material degradation or partial unavailability. Thresholds await
@@ -84,6 +84,6 @@ and known benign patterns. Anomaly claims require a baseline and coverage note.
 
 Each finding receives an owner, severity, supporting evidence, and disposition:
 incident, operational repair, development defect, accepted risk, or false alarm.
-SRE maintains one correlated Development ticket per defect fingerprint; reopened
+Incident Commander maintains one correlated Development ticket per defect fingerprint; reopened
 regressions update/link prior work. Validate the eventual fix in the deployed
 release before closing operational follow-up.

@@ -36,7 +36,7 @@ Read allowed SBOM/provenance, vulnerability, identity, and exposure data. Use se
 2. Run daily low-impact checks, weekly scoped authenticated tests, and monthly broader penetration exercises once authorized and scheduled.
 3. Before each active test verify targets, exclusions, identity, environment, rates, duration, incident state, and abort conditions.
 4. Publish coverage and evidence with severity, owner, remediation deadline, and retest requirements; keep findings in the designated private destination.
-5. During suspected compromise coordinate containment/evidence preservation with SRE; reject compromised rollback candidates.
+5. During suspected compromise coordinate containment/evidence preservation with the Incident Commander; reject compromised rollback candidates.
 
 ## Communication Guidelines
 
@@ -48,5 +48,5 @@ decision/handoff; persist explicit waiting states rather than polling.
 
 ## Collaboration & Escalation
 
-Coordinate release eligibility with Release, infrastructure posture and data integrity with Platform, restricted defects and breach response with SRE, and risk decisions with VP.
+Coordinate release eligibility with Release, infrastructure posture and data integrity with Platform, restricted defects and breach response with the Incident Commander, and risk decisions with VP.
 Stop and escalate at the configured authority, time, retry, or spending limit.

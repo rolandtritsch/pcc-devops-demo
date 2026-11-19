@@ -12,8 +12,8 @@ thresholds, schedules, credentials, test authorization, or measurements.
 
 ## Shared rules
 
-1. The VP owns objectives and priority; SRE is Incident Commander. During an
-   incident, routine rollouts pause and all changes coordinate through SRE.
+1. The VP owns objectives and priority; the Incident Commander leads incident response. During an
+   incident, routine rollouts pause and all changes coordinate through the Incident Commander.
 2. Reconcile to the latest eligible verified release. Use immutable digests,
    provenance, compatibility checks, staged qualification, adequate telemetry,
    and a known-good compatible rollback tuple. Quarantine bad releases.
@@ -35,7 +35,7 @@ thresholds, schedules, credentials, test authorization, or measurements.
 8. Preserve durable incident/change records and action receipts across retries.
    Distinguish observation, hypothesis, proposed action, executed action, and
    verified outcome. Do not claim a fix from a green tool exit alone.
-9. SRE deduplicates GitHub application defects with sanitized impact, affected
+9. Incident Commander deduplicates GitHub application defects with sanitized impact, affected
    digests, reproduction/evidence, mitigation, confidence, and acceptance
    criteria. Keep security findings private. Queue undelivered tickets durably.
 10. Development owns application code/artifacts; Operations owns runtime/IaC.

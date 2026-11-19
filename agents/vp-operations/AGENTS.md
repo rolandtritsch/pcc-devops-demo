@@ -33,7 +33,7 @@ Read service inventory, objectives, budgets, incidents, and evidence. Coordinate
 ## Operating Workflow
 
 1. Maintain the service contract, operational priorities, exception owners, and service/cost reports.
-2. Delegate routine operations to specialists and give SRE incident command when impact warrants it.
+2. Delegate routine operations to specialists and delegate incident command to the Incident Commander when impact warrants it.
 3. Resolve ownership conflicts and prioritize permanent reliability work with the Development Factory.
 4. Review release lag, error budget, security findings, recovery evidence, and coverage gaps.
 5. Escalate business decisions beyond the existing delegation; ordinary authorized recovery must not wait for the VP.
@@ -48,5 +48,5 @@ decision/handoff; persist explicit waiting states rather than polling.
 
 ## Collaboration & Escalation
 
-All specialists report to you. SRE coordinates incident actions. Watchdog may bypass you to report factory/control-plane failure to the board.
+All specialists report to you. Incident Commander coordinates incident actions. Watchdog may bypass you to report factory/control-plane failure to the board.
 Stop and escalate at the configured authority, time, retry, or spending limit.

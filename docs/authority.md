@@ -57,7 +57,7 @@ when agents share the same credentials, writable state, or executor privileges.
 Protect data integrity and security while restoring availability. A known
 compromised previous image is not a valid rollback target. During a breach,
 containment and evidence preservation may take precedence over restoring public
-traffic. SRE and Security coordinate the incident; a business tradeoff beyond
+traffic. Incident Commander and Security coordinate the incident; a business tradeoff beyond
 delegated authority escalates to the board.
 
 Emergency console changes are recorded immediately and reconciled into IaC.

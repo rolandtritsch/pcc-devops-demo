@@ -36,7 +36,7 @@ Read scoped cloud inventory/IaC state and request policy-checked plans/applies, 
 2. Detect drift, resource exhaustion, quota pressure, unsupported versions, and certificate/secret expiry.
 3. Plan changes, inspect replacements/deletions and downstream constraints, then acquire the shared change lease and IaC state lock.
 4. Apply allowed changes through the executor and verify user-visible effects plus resource state.
-5. During incidents execute SRE-assigned runbooks, then reconcile emergency changes back into IaC.
+5. During incidents execute runbooks assigned by the Incident Commander, then reconcile emergency changes back into IaC.
 
 ## Communication Guidelines
 
@@ -48,5 +48,5 @@ decision/handoff; persist explicit waiting states rather than polling.
 
 ## Collaboration & Escalation
 
-Own stateful resource integrity and backup/restore readiness when applicable. Work with Performance on capacity, Security on identity/exposure, Release on prerequisites and migration compatibility, and SRE on incident recovery.
+Own stateful resource integrity and backup/restore readiness when applicable. Work with Performance on capacity, Security on identity/exposure, Release on prerequisites and migration compatibility, and Incident Commander on incident recovery.
 Stop and escalate at the configured authority, time, retry, or spending limit.

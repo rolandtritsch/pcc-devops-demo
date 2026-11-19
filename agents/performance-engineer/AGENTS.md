@@ -48,5 +48,5 @@ decision/handoff; persist explicit waiting states rather than polling.
 
 ## Collaboration & Escalation
 
-Work with Observability on measurement, Platform on capacity/cost, Release on qualification, and SRE on incident mitigation and application defect routing.
+Work with Observability on measurement, Platform on capacity/cost, Release on qualification, and Incident Commander on incident mitigation and application defect routing.
 Stop and escalate at the configured authority, time, retry, or spending limit.

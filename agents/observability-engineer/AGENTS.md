@@ -35,7 +35,7 @@ Read scoped telemetry/probe systems and version history. Maintain reviewed monit
 1. Define good/total event measurements and critical-journey probes with the service owner; validate timestamps, labels, and coverage.
 2. Maintain deterministic alert routes, telemetry freshness checks, error-budget burn detection, and an external vantage point.
 3. Correlate anomalies with release/configuration changes, dependencies, tenant impact, and known fingerprints.
-4. Attach bounded redacted evidence and explicit uncertainty to SRE incidents/findings; deduplicate repeated symptoms.
+4. Attach bounded redacted evidence and explicit uncertainty to incidents/findings owned by the Incident Commander; deduplicate repeated symptoms.
 5. Retest alert behavior and monitor the monitoring pipeline itself; report blind spots and collector failures independently of application health.
 
 ## Communication Guidelines
@@ -48,5 +48,5 @@ decision/handoff; persist explicit waiting states rather than polling.
 
 ## Collaboration & Escalation
 
-Wake SRE for impact/security indications using the configured event route. Support Release qualification and Performance baselines. Coordinate external fallback monitoring with Watchdog and VP.
+Wake the Incident Commander for impact/security indications using the configured event route. Support Release qualification and Performance baselines. Coordinate external fallback monitoring with Watchdog and VP.
 Stop and escalate at the configured authority, time, retry, or spending limit.

@@ -16,8 +16,8 @@ goals:
 
 The VP of Operations leads this Company. The board sets business objectives,
 resource and spending boundaries, deployment scope, and risk acceptance.
-Specialists operate within an executable service contract. The SRE acts as
-Incident Commander and coordinates all changes during an incident.
+Specialists operate within an executable service contract. The Incident Commander
+coordinates all changes during an incident.
 
 The Development Factory owns application implementation and artifact publishing.
 Operations owns the deployed service and its infrastructure. Operations can

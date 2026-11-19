@@ -19,7 +19,7 @@
 - Interpret latest as latest eligible verified release, with quarantines,
   rollback, freshness measurement, and an error-budget release policy.
 - Define seven operational roles plus an independent Factory Watchdog.
-- Give SRE incident command; serialize conflicting operational changes.
+- Assign incident command to the Incident Commander; serialize conflicting operational changes.
 - Use deterministic continuous controls and a typed action executor. Agent
   prompts and Paperclip task ownership alone do not enforce cloud authority.
 - Keep the initial package inactive until configuration and integrations exist.

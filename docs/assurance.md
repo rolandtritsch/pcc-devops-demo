@@ -10,7 +10,7 @@ Exact schedules, time zones, targets, and execution environments remain unset.
 | Each release | Provenance, artifact scan, compatibility, smoke/journey tests, performance regression, rollback readiness | Release with specialists |
 | Daily | Vulnerability/exposure/configuration checks, TLS/secret expiry, backup freshness when applicable, log anomalies, release lag | Security, Platform, Observability |
 | Weekly | Scoped authenticated active security tests, capacity/load characterization, drift and access review | Security, Performance, Platform |
-| Monthly | Broader scoped penetration exercise, isolated restore drill when applicable, resilience exercise, service-objective and cost review | Security, Platform, SRE, VP |
+| Monthly | Broader scoped penetration exercise, isolated restore drill when applicable, resilience exercise, service-objective and cost review | Security, Platform, Incident Commander, VP |
 | After material changes/incidents | Requalify affected security, performance, recovery, and operational assumptions | Relevant specialist |
 
 ## Security testing
@@ -50,7 +50,7 @@ unknown telemetry blocks risky changes and triggers a monitoring incident.
 ## Data and recovery
 
 Platform owns backup/restore and stateful integrity checks when applicable;
-Release owns migration and rollback compatibility, with SRE coordinating incidents.
+Release owns migration and rollback compatibility, with the Incident Commander coordinating incidents.
 The current Fibonacci demo has no durable application data to back up or restore.
 
 Define RPO (maximum acceptable data loss) and RTO (time to restore service).

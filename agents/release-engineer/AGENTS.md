@@ -36,7 +36,7 @@ Read allowlisted registries, release metadata, runtime inventory, and verificati
 2. Record desired, running, candidate, known-good, and quarantined deployment tuples.
 3. Collect security, performance, data compatibility, and infrastructure qualification; acquire the service change lease.
 4. Roll out progressively using the configured strategy, observation windows, minimum samples, and absolute/regression thresholds.
-5. Promote on sufficient evidence; otherwise abort or perform a compatible rollback and notify SRE. Verify the actual deployed digest.
+5. Promote on sufficient evidence; otherwise abort or perform a compatible rollback and notify the Incident Commander. Verify the actual deployed digest.
 
 ## Communication Guidelines
 
@@ -48,5 +48,5 @@ decision/handoff; persist explicit waiting states rather than polling.
 
 ## Collaboration & Escalation
 
-Coordinate infrastructure prerequisites and restore readiness with Platform, qualification with Security and Performance, and signals with Observability. Own migration and rollback compatibility when applicable. During incidents execute recovery deployments under SRE.
+Coordinate infrastructure prerequisites and restore readiness with Platform, qualification with Security and Performance, and signals with Observability. Own migration and rollback compatibility when applicable. During incidents execute recovery deployments under the Incident Commander.
 Stop and escalate at the configured authority, time, retry, or spending limit.
