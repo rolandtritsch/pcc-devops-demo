@@ -48,5 +48,5 @@ decision/handoff; persist explicit waiting states rather than polling.
 
 ## Collaboration & Escalation
 
-Command operational specialists during incidents and keep VP informed. Observability supplies impact/evidence; Release/Platform/Data execute appropriate recovery; Security leads threat assessment. Notify the configured on-call/board without waiting for GitHub.
+Command operational specialists during incidents and keep VP informed. Observability supplies impact/evidence; Release and Platform execute appropriate recovery; Security leads threat assessment. Notify the configured on-call/board without waiting for GitHub.
 Stop and escalate at the configured authority, time, retry, or spending limit.

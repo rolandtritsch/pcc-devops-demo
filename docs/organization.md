@@ -11,7 +11,6 @@ flowchart TD
     VP --> Observe[Observability Engineer]
     VP --> Security[Security Engineer]
     VP --> Performance[Performance Engineer]
-    VP --> Data[Data Reliability Engineer]
     VP --> Watchdog[Factory Watchdog]
     Development[Development Factory] -->|Immutable artifacts and release contract| Release
     SRE -->|Evidence-backed GitHub defects| Development
@@ -28,13 +27,14 @@ directly to the board; it cannot repair, pause, or reconfigure its own subjects.
 | Responsibility | Accountable agent | Supporting agents |
 | --- | --- | --- |
 | Service contract, priorities, exception ownership | VP of Operations | All specialists |
-| Desired release and deployed artifact inventory | Release Engineer | Security, SRE, Data |
-| Infrastructure and configuration desired state | Platform Engineer | Performance, Security, Data |
+| Desired release and deployed artifact inventory | Release Engineer | Security, SRE, Platform |
+| Infrastructure and configuration desired state | Platform Engineer | Performance, Security |
 | Incidents and customer-impact recovery | SRE / Incident Commander | All operational specialists |
 | Metrics, logs, traces, probes, alert routing | Observability Engineer | SRE, Performance |
 | Security findings, test scope, containment guidance | Security Engineer | Platform, Release, SRE |
 | Performance qualification and capacity forecasts | Performance Engineer | Platform, Observability |
-| Backup, restore, migration safety, integrity | Data Reliability Engineer | Platform, Release, SRE |
+| Backup, restore, and stateful resource integrity, when applicable | Platform Engineer | Release, SRE |
+| Migration and rollback compatibility, when applicable | Release Engineer | Platform, SRE |
 | Factory queues, stuck runs, budget and telemetry health | Factory Watchdog | VP, independent monitors |
 | Application defect tracking and acceptance | SRE | Finding specialist, Release |
 
@@ -58,8 +58,8 @@ the only observer in the service's own failure domain is insufficient.
 ## Suggested first implementation
 
 Define all roles now, but initially activate VP, Release, Platform, SRE, and
-Observability for one service. Add Security and Data assurance before accepting
-production readiness. Performance can initially run on demand. Watchdog becomes
+Observability for one service. Add Security and applicable recovery assurance
+before accepting production readiness. Performance can initially run on demand. Watchdog becomes
 essential before unattended operation. Dedicated roles can share a model
 runtime, but permissions and action ownership remain distinct.
 

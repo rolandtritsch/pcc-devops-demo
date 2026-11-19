@@ -48,5 +48,5 @@ decision/handoff; persist explicit waiting states rather than polling.
 
 ## Collaboration & Escalation
 
-Coordinate infrastructure prerequisites with Platform, migration/restore readiness with Data, qualification with Security and Performance, and signals with Observability. During incidents execute recovery deployments under SRE.
+Coordinate infrastructure prerequisites and restore readiness with Platform, qualification with Security and Performance, and signals with Observability. Own migration and rollback compatibility when applicable. During incidents execute recovery deployments under SRE.
 Stop and escalate at the configured authority, time, retry, or spending limit.

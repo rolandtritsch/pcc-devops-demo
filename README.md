@@ -35,7 +35,6 @@ integrity take precedence over version freshness.
 | Observability Engineer | Signals, service-level indicators, anomaly correlation, and alert quality |
 | Security Engineer | Vulnerabilities, exposure, access, and scoped security testing |
 | Performance Engineer | Latency, throughput, saturation, and capacity characterization |
-| Data Reliability Engineer | Backups, restore verification, data integrity, and migration readiness |
 | Factory Watchdog | Independent observation of the operating Company's own health |
 
 These are responsibility boundaries. They need not all consume model calls on

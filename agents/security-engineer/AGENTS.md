@@ -48,5 +48,5 @@ decision/handoff; persist explicit waiting states rather than polling.
 
 ## Collaboration & Escalation
 
-Coordinate release eligibility with Release, infrastructure posture with Platform, restricted defects with SRE, and risk decisions with VP. Data integrity and breach implications involve Data Reliability.
+Coordinate release eligibility with Release, infrastructure posture and data integrity with Platform, restricted defects and breach response with SRE, and risk decisions with VP.
 Stop and escalate at the configured authority, time, retry, or spending limit.

@@ -48,5 +48,5 @@ decision/handoff; persist explicit waiting states rather than polling.
 
 ## Collaboration & Escalation
 
-Work with Performance on capacity, Security on identity/exposure, Data on stateful resources, Release on prerequisites, and SRE on incident recovery.
+Own stateful resource integrity and backup/restore readiness when applicable. Work with Performance on capacity, Security on identity/exposure, Release on prerequisites and migration compatibility, and SRE on incident recovery.
 Stop and escalate at the configured authority, time, retry, or spending limit.
