@@ -1,0 +1,50 @@
+# Selected target inventory; not an executor-consumed authorization contract.
+schema: devops-demo/target-inventory-v1
+service: devops-demo
+workload:
+  kind: stateless-background-worker
+  operation: fibonacci
+  n_min: 0
+  n_max: 99
+  delay_between_calculations_seconds: 5
+  durable_customer_data: false
+  public_api: false
+repositories:
+  application_local: ../python-devops-demo
+  infrastructure_local: ../pulumi-devops-demo
+  application_github: https://github.com/rolandtritsch/python-devops-demo
+  infrastructure_github: https://github.com/rolandtritsch/pulumi-devops-demo
+  github_development_issues: https://github.com/rolandtritsch/python-devops-demo/issues
+  github_private_security_findings: null
+cloud:
+  provider: aws
+  profile: roland
+  account_id: "519722017377"
+  region: eu-west-1
+  pulumi_stack: rolandtritsch/devops-demo/devops-demo
+  ecr_repository: python-devops-demo
+  ecs_cluster: devops-demo
+  ecs_service: devops-demo
+  log_group: /ecs/devops-demo
+  task_cpu_units: 256
+  task_memory_mib: 512
+  desired_count: 1
+  ingress_rules: []
+  baseline_verified_at: "2026-11-19T14:37:07Z"
+  baseline_task_definition: devops-demo:2
+  baseline_image_digest: sha256:c8bedab999e6cb5104a4ad68c396cf5b759b97319c87c47c4397ee2de199188f
+observability:
+  logs: cloudwatch-json-stdout
+  container_health_url: http://127.0.0.1:8080/healthz
+  container_metrics_url: http://127.0.0.1:8080/metrics
+  metrics_scraper_configured: false
+  stale_calculation_threshold_seconds: 15
+  healthcheck_interval_seconds: 15
+objectives:
+  availability: null
+  recovery_time: null
+  calculation_cadence: null
+  data_loss: not-applicable-no-durable-data
+factory:
+  activated: false
+  enforced_action_policy: false

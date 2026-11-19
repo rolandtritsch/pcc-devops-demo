@@ -1,0 +1,81 @@
+# Design input only. No executor consumes or enforces this file yet.
+# Nulls are unresolved decisions, not unlimited values or implicit defaults.
+schema: devops-demo/service-contract-draft-v1
+status: unconfigured
+environment: null
+service:
+  name: null
+  critical_journeys: []
+  owner: null
+cloud:
+  provider: null
+  account_or_project: null
+  regions: []
+  resource_allowlist: []
+repositories:
+  infrastructure: null
+  deployment: null
+  development_issues: null
+  private_security_findings: null
+release:
+  channel: null
+  trusted_publishers: []
+  artifact_registries: []
+  immutable_digest_required: true
+  max_eligible_release_lag_minutes: null
+  rollout_strategy: null
+  observation_window_minutes: null
+  minimum_sample_count: null
+  migration_compatibility_contract: null
+objectives:
+  availability:
+    target: null
+    window_days: null
+    good_event_definition: null
+  performance:
+    critical_journey: null
+    p95_latency_ms: null
+    p99_latency_ms: null
+    request_rate_per_second: null
+    workload_profile: null
+  recovery:
+    rto_minutes: null
+    rpo_minutes: null
+authority:
+  mode: automatic_bounded
+  permitted_runbooks: []
+  max_attempts_per_incident: null
+  remediation_timeout_minutes: null
+  cooldown_seconds: null
+  max_replicas: null
+  max_cloud_monthly_cost: null
+  max_incremental_action_cost: null
+  currency: null
+  forbidden_actions:
+    - expand_own_permissions
+    - overwrite_production_data_without_exception
+    - deploy_unverified_or_quarantined_artifact
+    - test_unlisted_target
+security_testing:
+  authorized_targets: []
+  excluded_targets: []
+  production_active_testing_authorized: false
+  maximum_requests_per_second: null
+  maximum_duration_minutes: null
+  abort_conditions: []
+monitoring:
+  telemetry_sources: []
+  external_probe_locations: []
+  stale_after_seconds: null
+  sensitive_evidence_store: null
+  evidence_retention_days: null
+escalation:
+  board_contact: null
+  incident_notification_channel: null
+  fallback_on_call: null
+factory:
+  paperclip_instance: null
+  adapter: null
+  model: null
+  monthly_inference_budget: null
+  schedule_timezone: null
