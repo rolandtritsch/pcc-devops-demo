@@ -18,7 +18,8 @@
 
 - Interpret latest as latest eligible verified release, with quarantines,
   rollback, freshness measurement, and an error-budget release policy.
-- Define seven operational roles plus an independent Factory Watchdog.
+- Define seven operational roles; use Paperclip's built-in execution monitoring
+  and opt-in task watchdogs rather than a dedicated Company monitoring agent.
 - Assign incident command to the Incident Commander; serialize conflicting operational changes.
 - Use deterministic continuous controls and a typed action executor. Agent
   prompts and Paperclip task ownership alone do not enforce cloud authority.
