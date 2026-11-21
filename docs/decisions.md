@@ -88,4 +88,16 @@ issue trackers are not a destination for sensitive security findings.
 No values or product names from neighboring projects have been assumed to be
 the target. Existing cloud credentials are not authorization to mutate a stack.
 
+## November 21, 2026 — withdraw the derived runtime image
+
+The user rejected the derived Paperclip Docker image approach and requested its
+removal. Remove the Dockerfile, image-specific installer, tool lock, preflight,
+Docker build context exclusions, and runtime-image build target. The image
+implementation was untracked, so it was removed before publication.
+
+Operational helpers remain available locally. A replacement execution environment
+has not been selected; tool provisioning, scoped identities, and isolation must
+be designed and verified before activating the Company. This supersedes the
+previous derived-image selection without choosing a replacement.
+
 [deployment]: https://github.com/rolandtritsch/pulumi-devops-demo/blob/main/docs/deployment.md

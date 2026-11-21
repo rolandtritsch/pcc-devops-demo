@@ -66,6 +66,13 @@ The target's [baseline inventory][baseline] records the chosen cloud resources.
 It is not an authorization policy or an agreed SLO. The Company remains inactive
 until the operating contract, executor, agent runtime, and integration work exist.
 
+## Execution environment
+
+The derived Paperclip Docker image was withdrawn on November 21, 2026.
+This repository does not supply a custom runtime image. Tool provisioning,
+credential delivery, and execution isolation remain to be designed and verified
+before the Company is activated.
+
 ## Working with this repository
 
 Start with the decision log and replace the service-contract placeholders with
