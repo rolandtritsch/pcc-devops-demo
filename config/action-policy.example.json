@@ -1,0 +1,14 @@
+{
+  "schema": "pcc-devops-demo/actions-v1",
+  "mutations_enabled": false,
+  "allowed_caller_arn_patterns": [
+    "arn:aws:sts::519722017377:assumed-role/devops-demo-operations/*"
+  ],
+  "eligible_digests": [
+    "sha256:c8bedab999e6cb5104a4ad68c396cf5b759b97319c87c47c4397ee2de199188f"
+  ],
+  "quarantined_digests": [
+    "sha256:5a4c98e3e249c5148ad256e7ddb1de1cf0c8c964b12d9f132d08ae3e36c594c2"
+  ],
+  "verification_timeout_seconds": 180
+}

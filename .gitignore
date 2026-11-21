@@ -7,3 +7,5 @@ __pycache__/
 .venv/
 artifacts/
 !artifacts/.gitkeep
+.ruff_cache/
+.pytest_cache/

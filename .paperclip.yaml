@@ -1,0 +1,59 @@
+# Runtime bindings are still required; enable only after the demo preflight.
+schema: paperclip/v1
+agents:
+  incident-commander:
+    runtime:
+      heartbeat:
+        enabled: false
+        intervalSec: 0
+        maxConcurrentRuns: 1
+        wakeOnAssignment: true
+        wakeOnDemand: true
+  observability-engineer:
+    runtime:
+      heartbeat:
+        enabled: false
+        intervalSec: 0
+        maxConcurrentRuns: 1
+        wakeOnAssignment: true
+        wakeOnDemand: true
+  performance-engineer:
+    runtime:
+      heartbeat:
+        enabled: false
+        intervalSec: 0
+        maxConcurrentRuns: 1
+        wakeOnAssignment: true
+        wakeOnDemand: true
+  platform-engineer:
+    runtime:
+      heartbeat:
+        enabled: false
+        intervalSec: 0
+        maxConcurrentRuns: 1
+        wakeOnAssignment: true
+        wakeOnDemand: true
+  release-engineer:
+    runtime:
+      heartbeat:
+        enabled: false
+        intervalSec: 0
+        maxConcurrentRuns: 1
+        wakeOnAssignment: true
+        wakeOnDemand: true
+  security-engineer:
+    runtime:
+      heartbeat:
+        enabled: false
+        intervalSec: 0
+        maxConcurrentRuns: 1
+        wakeOnAssignment: true
+        wakeOnDemand: true
+  vp-operations:
+    runtime:
+      heartbeat:
+        enabled: false
+        intervalSec: 60
+        maxConcurrentRuns: 1
+        wakeOnAssignment: true
+        wakeOnDemand: true

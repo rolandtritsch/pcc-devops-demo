@@ -72,6 +72,21 @@ and pushed. Publish under `rolandtritsch`, use `main`, exclude generated/runtime
 artifacts and credentials, and verify clean local/tracking/remote parity. Public
 issue trackers are not a destination for sensitive security findings.
 
+## November 19, 2026 — operational skills and runtime
+
+The user requested application-ticket creation and infrastructure-change skills.
+Selected implementation: a derived Paperclip image, direct infrastructure
+commits/pushes to `main`, and automatic cloud actions limited to existing eligible
+ECR digests plus zero/one desired worker. Other infrastructure applies require
+review. The Incident Commander owns application tickets; Platform, Release, and
+Incident Commander share the infrastructure skill.
+
+The user also supplied a Pulumi token for `pulumi-paperclip`. Store it only as
+encrypted stack configuration and in AWS Secrets Manager, then inject it into
+ECS as `PULUMI_ACCESS_TOKEN`. The derived image contains tools and the Company
+package, never the token. The operations role scopes AWS access to the demo;
+helper checks constrain digest/count changes but do not provide process isolation.
+
 ### Further decisions for implementation
 
 - Deployment environments and isolation; resource/data ownership boundaries.
@@ -101,3 +116,24 @@ be designed and verified before activating the Company. This supersedes the
 previous derived-image selection without choosing a replacement.
 
 [deployment]: https://github.com/rolandtritsch/pulumi-devops-demo/blob/main/docs/deployment.md
+
+## November 19, 2026 — minute-based release and rollback demo
+
+The user requested ECR image discovery and deployment, intermittent-crash log
+monitoring, and an incident assigned to Incident Commander to roll back to the
+previous image. For now VP should wake Release Manager and log monitoring once
+a minute. Release Engineer retains its slug and owns Release Manager duties;
+Observability Engineer owns monitoring. Assignment wakes specialists because
+agent-authenticated cross-agent heartbeat invocation is forbidden.
+
+Added concrete role handoffs, disabled package heartbeat settings, demo loop
+parameters/runbook, read-only stopped-task/log observation, and helper guards
+for shared incident freeze/quarantine. The previous verified eligible digest is
+preserved before deploying; a bad digest remains quarantined after recovery.
+New pushes require policy eligibility, not merely ECR presence. Existing
+uncommitted runtime/skill work was preserved.
+
+Read-only Paperclip inspection found no deployed DevOps company. No company was
+created, timer enabled, image published, cloud changed, or crash injected. Live
+activation/acceptance remains necessary; role configuration alone is not proof
+of the end-to-end recovery loop.

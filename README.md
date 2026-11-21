@@ -7,8 +7,19 @@ performance, recovery, and evidence-backed feedback to Development.
 
 **Status: initial design, November 19, 2026.** This repository contains a draft
 Company package, role instructions, operating contracts, and demonstration
-scenarios. It does not yet contain cloud integrations, executable policy gates,
-deployed agents, scheduled jobs, or a working remediation harness.
+scenarios. Ticketing and guarded infrastructure helpers are implemented;
+the execution environment remains to be selected. The Company has no deployed
+agents, schedules, or autonomous remediation loop yet.
+
+## Release/crash/rollback loop
+
+The [concrete demo runbook][demo-loop] and [loop settings][loop-settings] specify
+minute-based VP dispatch, Release Engineer as Release Manager, CloudWatch/ECS
+monitoring by Observability, and incidents assigned to Incident Commander for
+verified rollback. A read-only observer includes stopped tasks and crash logs;
+the deployment helper checks shared freeze/quarantine state. The package stages
+disabled heartbeat settings; the DevOps company is not deployed or activated.
+New ECR pushes still need operator-policy eligibility before deployment.
 
 ## Agreed direction
 
@@ -64,7 +75,8 @@ group in AWS `eu-west-1`. It does not expose a public API or retain customer dat
 
 The target's [baseline inventory][baseline] records the chosen cloud resources.
 It is not an authorization policy or an agreed SLO. The Company remains inactive
-until the operating contract, executor, agent runtime, and integration work exist.
+until runtime bindings, action policy, objectives, and schedules are configured
+and verified.
 
 ## Execution environment
 
@@ -80,13 +92,32 @@ verified facts. Keep role instructions under `agents/`, shared operating rules
 under `skills/`, and design rationale under `docs/`. Keep credentials, customer
 data, and raw production logs out of Git.
 
+## Operational skills and runtime
+
+| Skill | Assigned agents | Capability |
+| --- | --- | --- |
+| `operations-contract` | All agents | Shared operating rules |
+| `observe-demo` | Release, Observability | Read-only ECR/ECS inventory and CloudWatch crash evidence |
+| `report-application-defect` | Incident Commander | Validate, deduplicate, and publish sanitized application tickets to `python-devops-demo` |
+| `manage-demo-infrastructure` | Platform, Release, Incident Commander | Infrastructure source changes, guarded Pulumi previews, existing-image deployment/rollback, and zero/one worker count |
+
+The [runtime guide][runtime] describes required tools and credential bindings.
+Provisioning those tools and credentials remains to be designed. No derived
+Paperclip image is supplied. No Docker daemon is needed to operate already
+published images.
+Helpers default to rendering/preview; execution uses explicit delegated policy,
+scoped credentials, persistent receipts, and a shared change lock. Infrastructure
+source changes commit/push directly to `main`; cloud changes outside digest/count
+bounds remain review-required.
+
 `COMPANY.md` and `agents/*/AGENTS.md` follow the local Paperclip package
 conventions. The shared `operations-contract` skill carries the minimum rules
 that must travel with imported agents. It is an instruction contract, not an
 implemented authorization mechanism.
 
-Adapter/model choices, runtime paths, secret bindings, and schedules will be
-added in `.paperclip.yaml` after the target and runtime are known. The local
+The `.paperclip.yaml` extension stages disabled heartbeat settings, including a
+60-second VP interval. Adapter/model choices, runtime paths, and secret bindings
+remain to be configured. The local
 Paperclip importer defaults unspecified adapters to `process`; do not treat
 package discovery or successful import as runtime readiness. No Company import
 or activation is part of this initial design work.
@@ -105,3 +136,7 @@ or activation is part of this initial design work.
 [python-demo]: https://github.com/rolandtritsch/python-devops-demo
 [pulumi-demo]: https://github.com/rolandtritsch/pulumi-devops-demo
 [baseline]: config/demo-target.yaml
+[runtime]: skills/manage-demo-infrastructure/references/runtime.md
+
+[demo-loop]: docs/demo-loop.md
+[loop-settings]: config/demo-loop.yaml

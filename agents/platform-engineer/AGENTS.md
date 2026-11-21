@@ -4,6 +4,7 @@ title: Platform Engineer
 reportsTo: vp-operations
 skills:
   - operations-contract
+  - manage-demo-infrastructure
 ---
 
 # Platform Engineer

@@ -1,0 +1,34 @@
+# Proposed demo defaults. Activation must bind the runtime and operator policy.
+schema: pcc-devops-demo/loop-v1
+activated: false
+coordinator:
+  agent: vp-operations
+  interval_seconds: 60
+  dispatch: assigned_paperclip_issues
+  coalesce_open_checks: true
+release:
+  agent: release-engineer # Release Manager responsibility; keep the package slug.
+  repository: python-devops-demo
+  ordering: imagePushedAt
+  eligibility: operator_policy_digest_allowlist
+  baseline_before_first_rollout: required
+  observation_seconds: 120
+  minimum_completed_calculations: 3
+monitoring:
+  agent: observability-engineer
+  log_group: /ecs/devops-demo
+  initial_lookback_seconds: 300
+  cursor_overlap_seconds: 120
+  stale_after_seconds: 30
+  include_stopped_tasks: true
+  paginate: true
+incident:
+  agent: incident-commander
+  fingerprint: service_environment_bad_digest
+  freeze_releases: true
+  quarantine_before_rollback: true
+  rollback_target: previous_verified_eligible_digest
+  maximum_rollback_attempts: 1
+  recovery_observation_seconds: 120
+  minimum_completed_calculations: 3
+  require_same_task_throughout_recovery: true

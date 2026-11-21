@@ -24,7 +24,7 @@ Operations owns the deployed service and its infrastructure. Operations can
 restore service without waiting for an application repair, then validate and
 deploy the repaired artifact through the normal release process.
 
-This is a design-stage package. No cloud target, service-level objective,
-credential scope, model runtime, or operational schedule has been configured.
-All agents must follow `operations-contract`. Its policy requirements still
-need implementation and integration testing before autonomous operation.
+The demo cloud target is identified and ticketing/infrastructure helpers are
+implemented. Company agent runtime, service objectives, action-policy activation,
+and operational schedules remain unconfigured. All agents follow
+`operations-contract`; deploying tools does not activate autonomous operation.
